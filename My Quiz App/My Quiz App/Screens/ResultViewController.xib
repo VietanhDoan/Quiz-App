@@ -27,17 +27,8 @@
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KPd-V9-3et" customClass="CustomButton" customModule="My_Quiz_App" customModuleProvider="target">
-                    <rect key="frame" x="244" y="674.5" width="140" height="50"/>
-                    <color key="backgroundColor" red="1" green="0.79298579170000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                    <state key="normal" title="Exit"/>
-                    <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
-                    </userDefinedRuntimeAttributes>
-                </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ug2-OP-VSV" customClass="CustomButton" customModule="My_Quiz_App" customModuleProvider="target">
-                    <rect key="frame" x="30" y="674.5" width="140" height="50"/>
+                    <rect key="frame" x="137" y="674.5" width="140" height="50"/>
                     <color key="backgroundColor" red="1" green="0.79298579170000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="140" id="GOE-sl-ICT"/>
@@ -54,17 +45,13 @@
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="Ug2-OP-VSV" firstAttribute="top" secondItem="R3F-fZ-YdS" secondAttribute="bottom" constant="30" id="8lm-jK-IDI"/>
-                <constraint firstItem="KPd-V9-3et" firstAttribute="height" secondItem="Ug2-OP-VSV" secondAttribute="height" id="BJI-tT-EB9"/>
                 <constraint firstItem="R3F-fZ-YdS" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="HWb-hm-ONB"/>
-                <constraint firstItem="KPd-V9-3et" firstAttribute="top" secondItem="R3F-fZ-YdS" secondAttribute="bottom" constant="30" id="M5w-b1-5yM"/>
-                <constraint firstItem="KPd-V9-3et" firstAttribute="width" secondItem="Ug2-OP-VSV" secondAttribute="width" id="Ne6-U8-oxB"/>
                 <constraint firstItem="R3F-fZ-YdS" firstAttribute="top" secondItem="Tzp-IZ-QhA" secondAttribute="bottom" constant="30" id="Our-IK-x5c"/>
                 <constraint firstItem="Tzp-IZ-QhA" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="4/10" id="SQF-QP-Y7h"/>
                 <constraint firstItem="Tzp-IZ-QhA" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="100" id="Uev-N0-Il3"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="R3F-fZ-YdS" secondAttribute="trailing" constant="20" id="Z9s-f6-g37"/>
                 <constraint firstItem="R3F-fZ-YdS" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="ZBA-BD-ps8"/>
-                <constraint firstItem="Ug2-OP-VSV" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="30" id="g0U-mH-kck"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="KPd-V9-3et" secondAttribute="trailing" constant="30" id="g10-3Z-bBg"/>
+                <constraint firstItem="Ug2-OP-VSV" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="hDB-So-AwN"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Tzp-IZ-QhA" secondAttribute="trailing" id="mXn-di-2iB"/>
                 <constraint firstItem="R3F-fZ-YdS" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="1/8" id="oGl-Ti-S6b"/>
                 <constraint firstItem="Tzp-IZ-QhA" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="qTA-Xv-crk"/>
