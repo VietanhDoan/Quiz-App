@@ -33,6 +33,9 @@
                 <constraint firstItem="C62-B6-nJ2" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="5" id="kHG-Lg-Ea0"/>
             </constraints>
             <size key="customSize" width="327" height="370"/>
+            <connections>
+                <outlet property="labelSelection" destination="C62-B6-nJ2" id="eTd-rD-3Q1"/>
+            </connections>
             <point key="canvasLocation" x="196.37681159420291" y="195.53571428571428"/>
         </collectionViewCell>
     </objects>

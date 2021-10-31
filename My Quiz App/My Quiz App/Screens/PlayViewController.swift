@@ -27,12 +27,37 @@ class PlayViewController: UIViewController{
         initListColorBackGround()
         initListQuestions()
         
+        
+        
         collectionViewAnswer.delegate = self
         collectionViewAnswer.dataSource = self
         
         collectionViewAnswer.register(UINib(nibName: "AnswerCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "AnswerCollectionViewCell")
         
         
+        labelQuestion.text = listQuestions[indexOfCurrentQuestion].question
+    }
+    
+    func randomSequenceGenerator(min: Int, max: Int) -> () -> Int {
+        var numbers: [Int] = []
+        return {
+            if numbers.isEmpty {
+                numbers = Array(min ... max)
+            }
+
+            let index = Int(arc4random_uniform(UInt32(numbers.count)))
+            return numbers.remove(at: index)
+        }
+    }
+    
+    func getRandomQuestions() -> [Int] {
+        var result: [Int] = []
+        let getRandom = randomSequenceGenerator(min: 0, max: 19)
+        for _ in 1...10 {
+            print(getRandom())
+            result.append(getRandom())
+        }
+        return result
     }
     
     func initListColorBackGround() -> Void {
@@ -70,6 +95,8 @@ class PlayViewController: UIViewController{
         listQuestions.append(QuestionModel(id: 17, question: "Thành phố nào là thủ đô của nước Nga?", selectionA: "Moscow", selectionB: "Paris", selectionC: "Saint Peterburg (Leningrad)", selectionD: "New York", correctAnswer: 0))
         listQuestions.append(QuestionModel(id: 18, question: "Năm 1928, nhân vật hoạt hình nào lần đầu tiên xuất hiện?", selectionA: "Vịt Donald", selectionB: "Công chúa Elsa", selectionC: "Chuột Mickey", selectionD: "Mèo Tom", correctAnswer: 2))
         listQuestions.append(QuestionModel(id: 19, question: "Người có công dẹp nạn cát cứ, thống nhất đất nước vào năm 967 là ai?", selectionA: "Đinh Bộ Lĩnh", selectionB: "Quang Trung", selectionC: "Lý Thường Kiệt", selectionD: "Lê Lợi", correctAnswer: 0))
+        
+        listQuestions.shuffle()
     }
     
     func changeToNextQuestion() -> Void {
@@ -85,6 +112,9 @@ class PlayViewController: UIViewController{
         } else {
             self.view.backgroundColor = listColorBackground[indexOfCurrentQuestion]
         }
+        
+        labelQuestion.text = listQuestions[indexOfCurrentQuestion].question
+        collectionViewAnswer.reloadData()
     }
 }
 
@@ -99,6 +129,15 @@ extension PlayViewController: UICollectionViewDelegate, UICollectionViewDataSour
         let cell = collectionViewAnswer.dequeueReusableCell(
             withReuseIdentifier: "AnswerCollectionViewCell",
             for: indexPath) as! AnswerCollectionViewCell
+        if (indexPath.row == 0) {
+            cell.labelSelection.text = listQuestions[indexOfCurrentQuestion].selectionA
+        } else if (indexPath.row == 1) {
+            cell.labelSelection.text = listQuestions[indexOfCurrentQuestion].selectionB
+        } else if (indexPath.row == 2) {
+            cell.labelSelection.text = listQuestions[indexOfCurrentQuestion].selectionC
+        } else {
+            cell.labelSelection.text = listQuestions[indexOfCurrentQuestion].selectionD
+        }
         return cell
     }
     

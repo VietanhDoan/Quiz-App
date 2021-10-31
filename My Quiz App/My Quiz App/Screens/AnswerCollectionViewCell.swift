@@ -8,7 +8,8 @@
 import UIKit
 
 class AnswerCollectionViewCell: UICollectionViewCell {
-
+    @IBOutlet weak var labelSelection: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
