@@ -35,10 +35,13 @@
                         <constraint firstAttribute="height" constant="50" id="zHY-Bg-IEr"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                    <state key="normal" title="Restart"/>
+                    <state key="normal" title="EXIT"/>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
                     </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="restartGame:" destination="-1" eventType="touchUpInside" id="hHS-9O-tzc"/>
+                    </connections>
                 </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>

@@ -12,6 +12,9 @@ class ResultViewController: UIViewController {
     var correctAnswer : Int = 0
     
     @IBOutlet weak var labelShowResult: UILabel!
+    @IBAction func restartGame(_ sender: Any) {
+        self.navigationController?.popToRootViewController(animated: true)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()

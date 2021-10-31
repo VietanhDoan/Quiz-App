@@ -38,13 +38,17 @@
                 </label>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="YZv-C4-pIV">
                     <rect key="frame" x="20" y="413.5" width="374" height="358.5"/>
-                    <color key="backgroundColor" systemColor="systemTealColor"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="42l-kG-s4y">
                         <size key="itemSize" width="128" height="128"/>
                         <size key="headerReferenceSize" width="0.0" height="0.0"/>
                         <size key="footerReferenceSize" width="0.0" height="0.0"/>
                         <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                     </collectionViewFlowLayout>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="Uoc-l5-UtF"/>
+                        <outlet property="delegate" destination="-1" id="kao-eL-Uz7"/>
+                    </connections>
                 </collectionView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6LE-ae-uwN" customClass="CustomButton" customModule="My_Quiz_App" customModuleProvider="target">
                     <rect key="frame" x="132" y="792" width="150" height="50"/>
@@ -54,7 +58,7 @@
                         <constraint firstAttribute="width" constant="150" id="ZWG-zj-XGP"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="27"/>
-                    <state key="normal" title="Submit">
+                    <state key="normal" title="SUBMIT">
                         <color key="titleColor" systemColor="linkColor"/>
                     </state>
                     <userDefinedRuntimeAttributes>
@@ -87,9 +91,6 @@
     <resources>
         <systemColor name="linkColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemTealColor">
-            <color red="0.35294117647058826" green="0.78431372549019607" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
