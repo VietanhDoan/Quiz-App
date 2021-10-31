@@ -4,13 +4,11 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PlayViewController" customModule="My_Quiz_App" customModuleProvider="target">
             <connections>
-                <outlet property="buttonSubmitAnswer" destination="6LE-ae-uwN" id="2MH-aR-bel"/>
                 <outlet property="collectionViewAnswer" destination="YZv-C4-pIV" id="FYU-gk-G1v"/>
                 <outlet property="labelQuestion" destination="cae-q7-8Nx" id="2wS-ay-OYA"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -37,7 +35,7 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="YZv-C4-pIV">
-                    <rect key="frame" x="20" y="413.5" width="374" height="358.5"/>
+                    <rect key="frame" x="20" y="423.5" width="374" height="358.5"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="42l-kG-s4y">
                         <size key="itemSize" width="128" height="128"/>
@@ -50,47 +48,22 @@
                         <outlet property="delegate" destination="-1" id="kao-eL-Uz7"/>
                     </connections>
                 </collectionView>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6LE-ae-uwN" customClass="CustomButton" customModule="My_Quiz_App" customModuleProvider="target">
-                    <rect key="frame" x="132" y="792" width="150" height="50"/>
-                    <color key="backgroundColor" red="1" green="0.79298579170000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="50" id="G4A-Yf-9J2"/>
-                        <constraint firstAttribute="width" constant="150" id="ZWG-zj-XGP"/>
-                    </constraints>
-                    <fontDescription key="fontDescription" type="system" pointSize="27"/>
-                    <state key="normal" title="SUBMIT">
-                        <color key="titleColor" systemColor="linkColor"/>
-                    </state>
-                    <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
-                    </userDefinedRuntimeAttributes>
-                    <connections>
-                        <action selector="submitAnswer:" destination="-1" eventType="touchUpInside" id="nJh-t4-27P"/>
-                    </connections>
-                </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" red="0.83302655068420073" green="1" blue="0.81472459491223392" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
             <constraints>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="6LE-ae-uwN" secondAttribute="bottom" constant="20" id="6PU-BV-mln"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="YZv-C4-pIV" secondAttribute="trailing" constant="20" id="BEZ-Pq-6jT"/>
                 <constraint firstItem="yIm-MP-hcw" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" priority="750" constant="30" id="CyS-H7-uW0"/>
                 <constraint firstItem="YZv-C4-pIV" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="4/10" id="PZv-It-KWh"/>
-                <constraint firstItem="6LE-ae-uwN" firstAttribute="top" secondItem="YZv-C4-pIV" secondAttribute="bottom" constant="20" id="i5b-7b-1AU"/>
                 <constraint firstItem="yIm-MP-hcw" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="iWG-4i-J5l"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="YZv-C4-pIV" secondAttribute="bottom" constant="80" id="lbc-3K-SoQ"/>
                 <constraint firstItem="cae-q7-8Nx" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="obA-hH-JFJ"/>
                 <constraint firstItem="cae-q7-8Nx" firstAttribute="top" secondItem="yIm-MP-hcw" secondAttribute="bottom" constant="15" id="qWQ-UT-X5U"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="cae-q7-8Nx" secondAttribute="trailing" constant="20" id="rNw-7u-Wlg"/>
-                <constraint firstItem="6LE-ae-uwN" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="uCl-C1-osD"/>
                 <constraint firstItem="cae-q7-8Nx" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="uYe-qI-zbr"/>
                 <constraint firstItem="YZv-C4-pIV" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="v3R-cJ-taR"/>
             </constraints>
             <point key="canvasLocation" x="-26.086956521739133" y="103.79464285714285"/>
         </view>
     </objects>
-    <resources>
-        <systemColor name="linkColor">
-            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-    </resources>
 </document>

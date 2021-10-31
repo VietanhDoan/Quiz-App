@@ -16,15 +16,17 @@ class PlayViewController: UIViewController{
     @IBOutlet weak var collectionViewAnswer: UICollectionView!
     @IBOutlet weak var buttonSubmitAnswer: CustomButton!
     
+    var listColorBackground: [UIColor] = []
+    
     @IBAction func submitAnswer(_ sender: Any) {
-        let resultController = ResultViewController()
-        resultController.correctAnswer = correctAnswer
-        self.navigationController?.pushViewController(resultController, animated: true)
+        
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        buttonSubmitAnswer.isHidden = true
+        initListColorBackGround()
+        
+//        buttonSubmitAnswer.isHidden = true
         
         collectionViewAnswer.delegate = self
         collectionViewAnswer.dataSource = self
@@ -34,12 +36,32 @@ class PlayViewController: UIViewController{
         
     }
     
+    func initListColorBackGround() -> Void {
+        listColorBackground.append(.blue)
+        listColorBackground.append(.cyan)
+        listColorBackground.append(.red)
+        listColorBackground.append(.yellow)
+        listColorBackground.append(.gray)
+        listColorBackground.append(.green)
+        listColorBackground.append(.orange)
+        listColorBackground.append(.purple)
+        listColorBackground.append(.systemPink)
+        listColorBackground.append(.brown)
+    }
+    
     func changeToNextQuestion() -> Void {
-        //
-        indexOfCurrentQuestion += 1
         
-        if (indexOfCurrentQuestion == 10) {
-            buttonSubmitAnswer.isHidden = false
+        if (indexOfCurrentQuestion < 10) {
+            indexOfCurrentQuestion += 1
+        }
+
+        if (indexOfCurrentQuestion >= 10) {
+//            buttonSubmitAnswer.isHidden = false
+            let resultController = ResultViewController()
+            resultController.correctAnswer = correctAnswer
+            self.navigationController?.pushViewController(resultController, animated: true)
+        } else {
+            self.view.backgroundColor = listColorBackground[indexOfCurrentQuestion]
         }
     }
 }
@@ -70,4 +92,14 @@ extension PlayViewController: UICollectionViewDelegate, UICollectionViewDataSour
        {
           return CGSize(width: 180, height: 150)
        }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        print("indexPath: \(indexPath.row)")
+        
+        changeToNextQuestion()
+        
+        print("Index \(indexOfCurrentQuestion)")
+        
+        
+    }
 }
