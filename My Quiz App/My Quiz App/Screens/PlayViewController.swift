@@ -15,15 +15,11 @@ class PlayViewController: UIViewController{
     @IBOutlet weak var labelQuestion: UILabel!
     @IBOutlet weak var collectionViewAnswer: UICollectionView!
     
-    var listColorBackground: [UIColor] = []
     var listQuestions : [QuestionModel] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        initListColorBackGround()
         initListQuestions()
-        
-        
         
         collectionViewAnswer.delegate = self
         collectionViewAnswer.dataSource = self
@@ -56,19 +52,6 @@ class PlayViewController: UIViewController{
         return result
     }
     
-    func initListColorBackGround() -> Void {
-        listColorBackground.append(.blue)
-        listColorBackground.append(.cyan)
-        listColorBackground.append(.red)
-        listColorBackground.append(.yellow)
-        listColorBackground.append(.gray)
-        listColorBackground.append(.green)
-        listColorBackground.append(.orange)
-        listColorBackground.append(.purple)
-        listColorBackground.append(.systemPink)
-        listColorBackground.append(.brown)
-    }
-    
     func initListQuestions() -> Void {
         // Add 20 questions
         listQuestions.append(QuestionModel(id: 0, question: "Ngày thu phân là ngày nào?", selectionA: "23 – 24 tháng 8", selectionB: "23 – 24 tháng 10", selectionC: "23 – 24 tháng 9", selectionD: "23 – 24 tháng 11", correctAnswer: 2))
@@ -99,14 +82,10 @@ class PlayViewController: UIViewController{
         
         if (indexOfCurrentQuestion < 10) {
             indexOfCurrentQuestion += 1
-        }
-
-        if (indexOfCurrentQuestion >= 10) {
+        } else {
             let resultController = ResultViewController()
             resultController.correctAnswer = correctAnswer
             self.navigationController?.pushViewController(resultController, animated: true)
-        } else {
-//            self.view.backgroundColor = listColorBackground[indexOfCurrentQuestion]
         }
         
         self.view.backgroundColor = UIColor(red: 1.00, green: 0.95, blue: 0.74, alpha: 1.00)
@@ -163,11 +142,6 @@ extension PlayViewController: UICollectionViewDelegate, UICollectionViewDataSour
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.9) {
             self.changeToNextQuestion()
         }
-        
-        
-        print("Index \(indexOfCurrentQuestion)")
-        
-        
     }
     
     func checkNumberCorrectAnswer(_ selection: Int) -> Bool {
