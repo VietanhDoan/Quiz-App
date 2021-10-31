@@ -7,12 +7,26 @@
 
 import UIKit
 
-class PlayViewController: UIViewController {
-
+class PlayViewController: UIViewController{
+    
+    @IBOutlet weak var labelQuestion: UILabel!
+    @IBOutlet weak var collectionViewAnswer: UICollectionView!
+    @IBOutlet weak var buttonSubmitAnswer: CustomButton!
+    
+    @IBAction func submitAnswer(_ sender: Any) {
+        let resultController = ResultViewController()
+        self.navigationController?.pushViewController(resultController, animated: true)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Do any additional setup after loading the view.
+//        collectionViewAnswer.delegate = self
+//        collectionViewAnswer.dataSource = self
+    }
+    
+    func changeToNextQuestion() -> Void {
+        //
     }
 
 
@@ -27,3 +41,17 @@ class PlayViewController: UIViewController {
     */
 
 }
+
+//extension PlayViewController: UICollectionViewDelegate, UICollectionViewDataSource  {
+//
+//    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+//        return 1
+//    }
+//
+//    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+//        let cell = collectionViewAnswer.dequeueReusableCell(
+//            withReuseIdentifier: "AnswerCollectionViewCell",
+//            for: indexPath)
+//        return cell
+//    }
+//}
