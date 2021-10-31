@@ -9,9 +9,16 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBAction func buttonPlayClicked(_ sender: Any) {
+        print("Hello")
+        let viewController = PlayViewController()
+        navigationController?.pushViewController(viewController, animated: true)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        self.navigationController?.setNavigationBarHidden(true, animated: true)
     }
 
 

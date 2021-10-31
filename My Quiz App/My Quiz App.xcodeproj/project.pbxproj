@@ -15,6 +15,10 @@
 		213128EA272D99E300D1FB2D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 213128E8272D99E300D1FB2D /* LaunchScreen.storyboard */; };
 		21D99751272E1055002F6124 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21D99750272E1055002F6124 /* GradientView.swift */; };
 		21D99754272E1534002F6124 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21D99753272E1534002F6124 /* CustomButton.swift */; };
+		21D9975C272E1794002F6124 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21D9975A272E1794002F6124 /* ResultViewController.swift */; };
+		21D9975D272E1794002F6124 /* ResultViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 21D9975B272E1794002F6124 /* ResultViewController.xib */; };
+		21D99760272E17B4002F6124 /* PlayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21D9975E272E17B4002F6124 /* PlayViewController.swift */; };
+		21D99761272E17B4002F6124 /* PlayViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 21D9975F272E17B4002F6124 /* PlayViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +32,10 @@
 		213128EB272D99E300D1FB2D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		21D99750272E1055002F6124 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		21D99753272E1534002F6124 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		21D9975A272E1794002F6124 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
+		21D9975B272E1794002F6124 /* ResultViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ResultViewController.xib; sourceTree = "<group>"; };
+		21D9975E272E17B4002F6124 /* PlayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayViewController.swift; sourceTree = "<group>"; };
+		21D9975F272E17B4002F6124 /* PlayViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlayViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +68,7 @@
 		213128DC272D99E100D1FB2D /* My Quiz App */ = {
 			isa = PBXGroup;
 			children = (
+				21D99755272E1642002F6124 /* Screens */,
 				21D99752272E1514002F6124 /* Utils */,
 				213128DD272D99E100D1FB2D /* AppDelegate.swift */,
 				213128DF272D99E100D1FB2D /* SceneDelegate.swift */,
@@ -79,6 +88,17 @@
 				21D99753272E1534002F6124 /* CustomButton.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		21D99755272E1642002F6124 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				21D9975A272E1794002F6124 /* ResultViewController.swift */,
+				21D9975B272E1794002F6124 /* ResultViewController.xib */,
+				21D9975E272E17B4002F6124 /* PlayViewController.swift */,
+				21D9975F272E17B4002F6124 /* PlayViewController.xib */,
+			);
+			path = Screens;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -141,6 +161,8 @@
 				213128EA272D99E300D1FB2D /* LaunchScreen.storyboard in Resources */,
 				213128E7272D99E300D1FB2D /* Assets.xcassets in Resources */,
 				213128E5272D99E100D1FB2D /* Main.storyboard in Resources */,
+				21D9975D272E1794002F6124 /* ResultViewController.xib in Resources */,
+				21D99761272E17B4002F6124 /* PlayViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -156,6 +178,8 @@
 				21D99751272E1055002F6124 /* GradientView.swift in Sources */,
 				213128E0272D99E100D1FB2D /* SceneDelegate.swift in Sources */,
 				21D99754272E1534002F6124 /* CustomButton.swift in Sources */,
+				21D99760272E17B4002F6124 /* PlayViewController.swift in Sources */,
+				21D9975C272E1794002F6124 /* ResultViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
