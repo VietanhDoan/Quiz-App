@@ -15,6 +15,7 @@
 		213128EA272D99E300D1FB2D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 213128E8272D99E300D1FB2D /* LaunchScreen.storyboard */; };
 		21A0F597272E39EC002EF188 /* AnswerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21A0F595272E39EC002EF188 /* AnswerCollectionViewCell.swift */; };
 		21A0F598272E39EC002EF188 /* AnswerCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 21A0F596272E39EC002EF188 /* AnswerCollectionViewCell.xib */; };
+		21A0F59A272E5DBF002EF188 /* QuestionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21A0F599272E5DBF002EF188 /* QuestionModel.swift */; };
 		21D99751272E1055002F6124 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21D99750272E1055002F6124 /* GradientView.swift */; };
 		21D99754272E1534002F6124 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21D99753272E1534002F6124 /* CustomButton.swift */; };
 		21D9975C272E1794002F6124 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21D9975A272E1794002F6124 /* ResultViewController.swift */; };
@@ -34,6 +35,7 @@
 		213128EB272D99E300D1FB2D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		21A0F595272E39EC002EF188 /* AnswerCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerCollectionViewCell.swift; sourceTree = "<group>"; };
 		21A0F596272E39EC002EF188 /* AnswerCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AnswerCollectionViewCell.xib; sourceTree = "<group>"; };
+		21A0F599272E5DBF002EF188 /* QuestionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionModel.swift; sourceTree = "<group>"; };
 		21D99750272E1055002F6124 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		21D99753272E1534002F6124 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		21D9975A272E1794002F6124 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
@@ -81,6 +83,7 @@
 				213128E6272D99E300D1FB2D /* Assets.xcassets */,
 				213128E8272D99E300D1FB2D /* LaunchScreen.storyboard */,
 				213128EB272D99E300D1FB2D /* Info.plist */,
+				21A0F599272E5DBF002EF188 /* QuestionModel.swift */,
 			);
 			path = "My Quiz App";
 			sourceTree = "<group>";
@@ -186,6 +189,7 @@
 				21D99751272E1055002F6124 /* GradientView.swift in Sources */,
 				213128E0272D99E100D1FB2D /* SceneDelegate.swift in Sources */,
 				21D99754272E1534002F6124 /* CustomButton.swift in Sources */,
+				21A0F59A272E5DBF002EF188 /* QuestionModel.swift in Sources */,
 				21D99760272E17B4002F6124 /* PlayViewController.swift in Sources */,
 				21D9975C272E1794002F6124 /* ResultViewController.swift in Sources */,
 			);
