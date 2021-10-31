@@ -20,13 +20,13 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="QUIZIZZ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yIm-MP-hcw">
-                    <rect key="frame" x="131" y="74" width="152" height="48"/>
+                    <rect key="frame" x="131" y="115.5" width="152" height="48"/>
                     <fontDescription key="fontDescription" type="system" pointSize="40"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Câu hỏi" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cae-q7-8Nx">
-                    <rect key="frame" x="20" y="137" width="374" height="200"/>
+                    <rect key="frame" x="20" y="203.5" width="374" height="200"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="200" id="FDt-BV-Vdy"/>
                     </constraints>
@@ -52,13 +52,13 @@
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" red="0.83302655068420073" green="1" blue="0.81472459491223392" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
             <constraints>
+                <constraint firstItem="YZv-C4-pIV" firstAttribute="top" secondItem="cae-q7-8Nx" secondAttribute="bottom" constant="20" id="81q-If-ibN"/>
+                <constraint firstItem="cae-q7-8Nx" firstAttribute="top" secondItem="yIm-MP-hcw" secondAttribute="bottom" constant="40" id="9CE-mt-0Fm"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="YZv-C4-pIV" secondAttribute="trailing" constant="20" id="BEZ-Pq-6jT"/>
-                <constraint firstItem="yIm-MP-hcw" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" priority="750" constant="30" id="CyS-H7-uW0"/>
                 <constraint firstItem="YZv-C4-pIV" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="4/10" id="PZv-It-KWh"/>
                 <constraint firstItem="yIm-MP-hcw" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="iWG-4i-J5l"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="YZv-C4-pIV" secondAttribute="bottom" constant="80" id="lbc-3K-SoQ"/>
                 <constraint firstItem="cae-q7-8Nx" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="obA-hH-JFJ"/>
-                <constraint firstItem="cae-q7-8Nx" firstAttribute="top" secondItem="yIm-MP-hcw" secondAttribute="bottom" constant="15" id="qWQ-UT-X5U"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="cae-q7-8Nx" secondAttribute="trailing" constant="20" id="rNw-7u-Wlg"/>
                 <constraint firstItem="cae-q7-8Nx" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="uYe-qI-zbr"/>
                 <constraint firstItem="YZv-C4-pIV" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="v3R-cJ-taR"/>
