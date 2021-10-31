@@ -50,7 +50,7 @@
                 </collectionView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <color key="backgroundColor" red="0.83302655068420073" green="1" blue="0.81472459491223392" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <color key="backgroundColor" red="0.95698499618117339" green="0.91834593762357719" blue="0.7318208956745984" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
             <constraints>
                 <constraint firstItem="YZv-C4-pIV" firstAttribute="top" secondItem="cae-q7-8Nx" secondAttribute="bottom" constant="20" id="81q-If-ibN"/>
                 <constraint firstItem="cae-q7-8Nx" firstAttribute="top" secondItem="yIm-MP-hcw" secondAttribute="bottom" constant="40" id="9CE-mt-0Fm"/>

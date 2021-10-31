@@ -18,10 +18,6 @@ class PlayViewController: UIViewController{
     var listColorBackground: [UIColor] = []
     var listQuestions : [QuestionModel] = []
     
-    @IBAction func submitAnswer(_ sender: Any) {
-        
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         initListColorBackGround()
@@ -34,7 +30,7 @@ class PlayViewController: UIViewController{
         
         collectionViewAnswer.register(UINib(nibName: "AnswerCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "AnswerCollectionViewCell")
         
-        
+        self.view.backgroundColor = UIColor.white
         labelQuestion.text = listQuestions[indexOfCurrentQuestion].question
     }
     
@@ -110,9 +106,10 @@ class PlayViewController: UIViewController{
             resultController.correctAnswer = correctAnswer
             self.navigationController?.pushViewController(resultController, animated: true)
         } else {
-            self.view.backgroundColor = listColorBackground[indexOfCurrentQuestion]
+//            self.view.backgroundColor = listColorBackground[indexOfCurrentQuestion]
         }
         
+        self.view.backgroundColor = UIColor.white
         labelQuestion.text = listQuestions[indexOfCurrentQuestion].question
         collectionViewAnswer.reloadData()
     }
@@ -156,18 +153,29 @@ extension PlayViewController: UICollectionViewDelegate, UICollectionViewDataSour
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
-        checkNumberCorrectAnswer(indexPath.row)
+        let isCorrectAnswer = checkNumberCorrectAnswer(indexPath.row)
+        if (isCorrectAnswer) {
+            self.view.backgroundColor = UIColor.green
+        } else {
+            self.view.backgroundColor = UIColor.red
+        }
         
-        changeToNextQuestion()
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.9) {
+            self.changeToNextQuestion()
+        }
+        
         
         print("Index \(indexOfCurrentQuestion)")
         
         
     }
     
-    func checkNumberCorrectAnswer(_ selection: Int) {
+    func checkNumberCorrectAnswer(_ selection: Int) -> Bool {
+        var result = false
         if (selection == listQuestions[indexOfCurrentQuestion].correctAnswer) {
             correctAnswer += 1
+            result = true
         }
+        return result
     }
 }
