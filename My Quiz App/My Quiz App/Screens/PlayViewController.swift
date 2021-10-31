@@ -30,7 +30,7 @@ class PlayViewController: UIViewController{
         
         collectionViewAnswer.register(UINib(nibName: "AnswerCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "AnswerCollectionViewCell")
         
-        self.view.backgroundColor = UIColor.white
+        self.view.backgroundColor = UIColor(red: 1.00, green: 0.95, blue: 0.74, alpha: 1.00)
         labelQuestion.text = listQuestions[indexOfCurrentQuestion].question
     }
     
@@ -109,7 +109,7 @@ class PlayViewController: UIViewController{
 //            self.view.backgroundColor = listColorBackground[indexOfCurrentQuestion]
         }
         
-        self.view.backgroundColor = UIColor.white
+        self.view.backgroundColor = UIColor(red: 1.00, green: 0.95, blue: 0.74, alpha: 1.00)
         labelQuestion.text = listQuestions[indexOfCurrentQuestion].question
         collectionViewAnswer.reloadData()
     }
