@@ -9,37 +9,34 @@ import UIKit
 
 class PlayViewController: UIViewController{
     
+    
+    var indexOfCurrentQuestion = 0
+    var correctAnswer = 0
     @IBOutlet weak var labelQuestion: UILabel!
     @IBOutlet weak var collectionViewAnswer: UICollectionView!
     @IBOutlet weak var buttonSubmitAnswer: CustomButton!
     
     @IBAction func submitAnswer(_ sender: Any) {
         let resultController = ResultViewController()
+        resultController.correctAnswer = correctAnswer
         self.navigationController?.pushViewController(resultController, animated: true)
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        buttonSubmitAnswer.isHidden = false
 //        collectionViewAnswer.delegate = self
 //        collectionViewAnswer.dataSource = self
     }
     
     func changeToNextQuestion() -> Void {
         //
+        indexOfCurrentQuestion += 1
+        
+        if (indexOfCurrentQuestion == 10) {
+            buttonSubmitAnswer.isHidden = false
+        }
     }
-
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
 
 //extension PlayViewController: UICollectionViewDelegate, UICollectionViewDataSource  {

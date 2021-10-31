@@ -9,6 +9,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ResultViewController" customModule="My_Quiz_App" customModuleProvider="target">
             <connections>
+                <outlet property="labelShowResult" destination="R3F-fZ-YdS" id="cQv-Ur-qTl"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -18,35 +19,54 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="congratulations" translatesAutoresizingMaskIntoConstraints="NO" id="Tzp-IZ-QhA">
-                    <rect key="frame" x="0.0" y="44" width="414" height="358.5"/>
+                    <rect key="frame" x="0.0" y="144" width="414" height="358.5"/>
                 </imageView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bạn đã trả lời đúng x/10 câu" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R3F-fZ-YdS">
-                    <rect key="frame" x="20" y="432.5" width="374" height="20.5"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bạn đã trả lời đúng x/10 câu" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R3F-fZ-YdS">
+                    <rect key="frame" x="20" y="532.5" width="374" height="112"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KPd-V9-3et">
-                    <rect key="frame" x="281" y="613" width="46" height="30"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <state key="normal" title="Button"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KPd-V9-3et" customClass="CustomButton" customModule="My_Quiz_App" customModuleProvider="target">
+                    <rect key="frame" x="244" y="674.5" width="140" height="50"/>
+                    <color key="backgroundColor" red="1" green="0.79298579170000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                    <state key="normal" title="Exit"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
+                    </userDefinedRuntimeAttributes>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ug2-OP-VSV">
-                    <rect key="frame" x="83" y="613" width="46" height="30"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <state key="normal" title="Button"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ug2-OP-VSV" customClass="CustomButton" customModule="My_Quiz_App" customModuleProvider="target">
+                    <rect key="frame" x="30" y="674.5" width="140" height="50"/>
+                    <color key="backgroundColor" red="1" green="0.79298579170000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="140" id="GOE-sl-ICT"/>
+                        <constraint firstAttribute="height" constant="50" id="zHY-Bg-IEr"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                    <state key="normal" title="Restart"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
+                    </userDefinedRuntimeAttributes>
                 </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
+                <constraint firstItem="Ug2-OP-VSV" firstAttribute="top" secondItem="R3F-fZ-YdS" secondAttribute="bottom" constant="30" id="8lm-jK-IDI"/>
+                <constraint firstItem="KPd-V9-3et" firstAttribute="height" secondItem="Ug2-OP-VSV" secondAttribute="height" id="BJI-tT-EB9"/>
                 <constraint firstItem="R3F-fZ-YdS" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="HWb-hm-ONB"/>
+                <constraint firstItem="KPd-V9-3et" firstAttribute="top" secondItem="R3F-fZ-YdS" secondAttribute="bottom" constant="30" id="M5w-b1-5yM"/>
+                <constraint firstItem="KPd-V9-3et" firstAttribute="width" secondItem="Ug2-OP-VSV" secondAttribute="width" id="Ne6-U8-oxB"/>
                 <constraint firstItem="R3F-fZ-YdS" firstAttribute="top" secondItem="Tzp-IZ-QhA" secondAttribute="bottom" constant="30" id="Our-IK-x5c"/>
                 <constraint firstItem="Tzp-IZ-QhA" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="4/10" id="SQF-QP-Y7h"/>
-                <constraint firstItem="Tzp-IZ-QhA" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="Uev-N0-Il3"/>
+                <constraint firstItem="Tzp-IZ-QhA" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="100" id="Uev-N0-Il3"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="R3F-fZ-YdS" secondAttribute="trailing" constant="20" id="Z9s-f6-g37"/>
                 <constraint firstItem="R3F-fZ-YdS" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="ZBA-BD-ps8"/>
+                <constraint firstItem="Ug2-OP-VSV" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="30" id="g0U-mH-kck"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="KPd-V9-3et" secondAttribute="trailing" constant="30" id="g10-3Z-bBg"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Tzp-IZ-QhA" secondAttribute="trailing" id="mXn-di-2iB"/>
+                <constraint firstItem="R3F-fZ-YdS" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="1/8" id="oGl-Ti-S6b"/>
                 <constraint firstItem="Tzp-IZ-QhA" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="qTA-Xv-crk"/>
             </constraints>
             <point key="canvasLocation" x="57" y="102"/>
