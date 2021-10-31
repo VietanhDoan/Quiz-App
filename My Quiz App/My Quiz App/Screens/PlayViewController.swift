@@ -155,12 +155,19 @@ extension PlayViewController: UICollectionViewDelegate, UICollectionViewDataSour
        }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print("indexPath: \(indexPath.row)")
+        
+        checkNumberCorrectAnswer(indexPath.row)
         
         changeToNextQuestion()
         
         print("Index \(indexOfCurrentQuestion)")
         
         
+    }
+    
+    func checkNumberCorrectAnswer(_ selection: Int) {
+        if (selection == listQuestions[indexOfCurrentQuestion].correctAnswer) {
+            correctAnswer += 1
+        }
     }
 }
