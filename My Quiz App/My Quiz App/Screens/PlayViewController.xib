@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -20,13 +21,13 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="QUIZIZZ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yIm-MP-hcw">
-                    <rect key="frame" x="131" y="115.5" width="152" height="48"/>
+                    <rect key="frame" x="131" y="126" width="152" height="48"/>
                     <fontDescription key="fontDescription" type="system" pointSize="40"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Câu hỏi" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cae-q7-8Nx">
-                    <rect key="frame" x="20" y="203.5" width="374" height="200"/>
+                    <rect key="frame" x="20" y="194" width="374" height="200"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="200" id="FDt-BV-Vdy"/>
                     </constraints>
@@ -35,7 +36,7 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="YZv-C4-pIV">
-                    <rect key="frame" x="20" y="423.5" width="374" height="358.5"/>
+                    <rect key="frame" x="20" y="404" width="374" height="448"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="42l-kG-s4y">
                         <size key="itemSize" width="128" height="128"/>
@@ -52,12 +53,12 @@
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" red="0.95698499618117339" green="0.91834593762357719" blue="0.7318208956745984" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
             <constraints>
-                <constraint firstItem="YZv-C4-pIV" firstAttribute="top" secondItem="cae-q7-8Nx" secondAttribute="bottom" constant="20" id="81q-If-ibN"/>
-                <constraint firstItem="cae-q7-8Nx" firstAttribute="top" secondItem="yIm-MP-hcw" secondAttribute="bottom" constant="40" id="9CE-mt-0Fm"/>
+                <constraint firstItem="YZv-C4-pIV" firstAttribute="top" secondItem="cae-q7-8Nx" secondAttribute="bottom" constant="10" id="81q-If-ibN"/>
+                <constraint firstItem="cae-q7-8Nx" firstAttribute="top" secondItem="yIm-MP-hcw" secondAttribute="bottom" constant="20" id="9CE-mt-0Fm"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="YZv-C4-pIV" secondAttribute="trailing" constant="20" id="BEZ-Pq-6jT"/>
-                <constraint firstItem="YZv-C4-pIV" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="4/10" id="PZv-It-KWh"/>
+                <constraint firstItem="YZv-C4-pIV" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="1/2" id="PZv-It-KWh"/>
                 <constraint firstItem="yIm-MP-hcw" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="iWG-4i-J5l"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="YZv-C4-pIV" secondAttribute="bottom" constant="80" id="lbc-3K-SoQ"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="YZv-C4-pIV" secondAttribute="bottom" constant="10" id="lbc-3K-SoQ"/>
                 <constraint firstItem="cae-q7-8Nx" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="obA-hH-JFJ"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="cae-q7-8Nx" secondAttribute="trailing" constant="20" id="rNw-7u-Wlg"/>
                 <constraint firstItem="cae-q7-8Nx" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="uYe-qI-zbr"/>
